@@ -1,0 +1,193 @@
+/* "Universal" selector - every text element (h1, h2, p) will changed its font to Tenor Sans. */
+* {
+    font-family: 'Tenor Sans';
+    box-sizing: border-box;
+}
+
+/* box-sizing avoids the dimensional issues that exist in the former box model.
+In this box model, the height and width of the box will remain fixed.
+The border thickness and padding would remain entirely inside of the box.*/
+
+body {
+    background-color: white;
+    padding: 50px;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+/* "#" selector refers to the element, that needs to be styled uniquely. Refers to HTML element with "id" attribute.  */
+#white-h2 {
+    color: white;
+}
+
+/* "Type" selector */
+h1 {
+    font-size: 58px;
+    color: white;
+    letter-spacing: 10px;
+    line-height: 2;
+    text-align: center;
+    /* "text-align" property specifies the horizontal alignment of text in an element. Available values are: left (default), center, right, justify. */
+}
+
+h2 {
+    font-size: 16px;
+    color: #715e49;
+}
+
+p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.container {
+    /* CV's are mostly A4 size - width x height = 210 x 297 mm */
+    width: 210mm;
+    background-color: #f9fbf9;
+    /* border is used to show where exactly is the container */
+    border: 1px solid black;
+    /* Bootstrap containers have 15px padding (left and right) by default. I don't want them. */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.header {
+    display: flex;
+    /* "display" defines a flex container (inline or block depending on the value). */
+    flex-direction: column;
+    /* "flex-direction" establishes the main-axis along which the children-elements will be displayed. Available values: row (default), row-reverse, column, column-reverse. */
+    align-items: center;
+    padding: 50px;
+}
+
+.header, .section-3 {
+    background-color: #dbcbba;
+}
+
+/*
+.header, .section-1, .section-2, .section-3, .section-4 , .experience {
+    border: 1px solid black;
+}
+ */
+
+/* "section" value of attribute for columns. Bootstrap columns have 15 px left and right padding set by default. They must be removed to preserve the CV template. */
+.section-1, .section-2, .section-3, .section-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Bootstrap rows don't have negative 15px paddings, so they occupy the entire width of container. Because the default 15px padding of container was set to 0px (left and right), now margins of the rows must be set to 0px */
+.no-gutter-1, .no-gutter-2 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.about, .portfolio, .contact, .h2-experience, .work, .social-media {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.about {
+    padding-top: 50px;
+}
+
+/* "Attribute" selector allows to target each image or hyperlinks individually. Thanks to this there is no need to create attribute like "class" or "id" within an <img> tag */
+img[src*='june'] {
+    /* The upper left and right corners of the image must be rounded */
+    border-radius: 50% 50% 0 0;
+    width: 100%;
+}
+
+.img-cam {
+    opacity: 7%;
+    padding-bottom: 15px;
+}
+
+.experience, .work, .social-media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.experience {
+    flex-direction: column;
+    position: absolute;
+    /*
+    text-align: center;
+     */
+}
+
+.work, .social-media {
+    flex-direction: row;
+}
+
+.B {
+    padding-left: 30px;
+}
+
+.twitter, .behance {
+    padding-left: 20px;
+}
+
+.img-fb, .img-tw, .img-be {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.section-3, .section-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement {
+    display: grid;
+    /* There is no grid-gap */
+    align-items: center;
+    padding: 50px;
+}
+
+.achievement-1, .achievement-2, .achievement-3, .achievement-4 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
+.centered-p {
+    text-align: center;
+}
+
+/* There will be 2 columns and 2 rows. If I set the two first achievements, the rest will match. */
+.achievement-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.achievement-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/*
+.achievement-3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.achievement-4 {
+    grid-column: 2;
+    grid-row: 2;
+}
+ */
+
+.achievement-1, .achievement-2 {
+    border-bottom: 1px solid #715e49;
+}
+
+.achievement-1, .achievement-3 {
+    border-right: 1px solid #715e49;
+}
