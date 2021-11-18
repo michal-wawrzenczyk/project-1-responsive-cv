@@ -17,8 +17,8 @@ h1, h2 {
     text-transform: uppercase;
 }
 
-/* "#" selector refers to the element, that needs to be styled uniquely. Refers to HTML element with "id" attribute.  */
-#white-h2 {
+/* "#" selector refers to the element, that needs to be styled uniquely. Refers to HTML element with "id" attribute. However here I will use the "class" attribute.  */
+.white-h2 {
     color: white;
 }
 
@@ -66,14 +66,8 @@ p {
     background-color: #dbcbba;
 }
 
-/*
-.header, .section-1, .section-2, .section-3, .section-4 , .experience {
-    border: 1px solid black;
-}
- */
-
 /* "section" value of attribute for columns. Bootstrap columns have 15 px left and right padding set by default. They must be removed to preserve the CV template. */
-.section-1, .section-2, .section-3, .section-4 {
+.section-1, .section-2, .section-3, .section-4, .section-5 {
     padding-left: 0;
     padding-right: 0;
 }
@@ -84,7 +78,7 @@ p {
     margin-right: 0;
 }
 
-.about, .portfolio, .contact, .h2-experience, .work, .social-media {
+.about, .portfolio, .contact, .h2-experience, .work, .social-media, footer {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 20px;
@@ -95,16 +89,23 @@ p {
     padding-top: 50px;
 }
 
-/* "Attribute" selector allows to target each image or hyperlinks individually. Thanks to this there is no need to create attribute like "class" or "id" within an <img> tag */
-img[src*='june'] {
+/* "Attribute" selector allows to target each image or hyperlinks individually. Thanks to this there is no need to create attribute like "class" or "id" within an <img> tag. But for this img I decided to use the "class" attribute. */
+.portrait {
     /* The upper left and right corners of the image must be rounded */
     border-radius: 50% 50% 0 0;
     width: 100%;
 }
 
+.experience {
+    position: relative;
+    padding-top: 25px;
+}
+
 .img-cam {
+    position: absolute;
+    margin: auto;
+    width: 440px;
     opacity: 7%;
-    padding-bottom: 15px;
 }
 
 .experience, .work, .social-media {
@@ -112,16 +113,17 @@ img[src*='june'] {
     align-items: flex-start;
 }
 
-.experience {
+.experience, .social-media {
     flex-direction: column;
-    position: absolute;
-    /*
-    text-align: center;
-     */
+
 }
 
-.work, .social-media {
+.work {
     flex-direction: row;
+}
+
+.work p {
+    line-height: 5px;
 }
 
 .B {
@@ -132,7 +134,7 @@ img[src*='june'] {
     padding-left: 20px;
 }
 
-.img-fb, .img-tw, .img-be {
+.img-sm {
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
@@ -144,20 +146,36 @@ img[src*='june'] {
     align-items: center;
 }
 
-.achievement {
+.social-media, .achievement {
     display: grid;
+}
+
+.sm-1, .sm-2, .sm-3 {
+    grid-row: 1;
+    padding-right: 20px;
+    line-height: 5px;
+}
+
+.sm-1 {
+    grid-column: 1;
+}
+
+.achievement {
     /* There is no grid-gap */
     align-items: center;
     padding: 50px;
 }
 
 .achievement-1, .achievement-2, .achievement-3, .achievement-4 {
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
     text-align: center;
     padding: 20px;
+    line-height: 5px;
 }
 
-.centered-p {
+.center-p {
     text-align: center;
 }
 
@@ -172,22 +190,15 @@ img[src*='june'] {
     grid-row: 1;
 }
 
-/*
-.achievement-3 {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.achievement-4 {
-    grid-column: 2;
-    grid-row: 2;
-}
- */
-
 .achievement-1, .achievement-2 {
     border-bottom: 1px solid #715e49;
 }
 
 .achievement-1, .achievement-3 {
     border-right: 1px solid #715e49;
+}
+
+footer {
+    padding-top: 20px;
+    text-align: justify;
 }

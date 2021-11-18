@@ -19,17 +19,19 @@
         <!-- This is the Bootstrap container. Bootstrap containers are used to establish the width for the layout. It has a width relative to a user’s screen size, becomes horizontally centered. Containers have 15px left and right padding by default. If we wanted the container to take up the entire width of the screen we can assign a class of "container-fluid". -->
         <div class="row">
             <!-- The rows group columns. The rows span the width of the container. They don't have negative 15px left and right paddings. -->
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-xs">
                 <!-- The Bootstrap grid system allows up to 12 columns inside one row. Each column has 15 px left and right padding. It means that space between two columns will be equal 30px. "class" attribute allows to size the columns depending on screen size: xs - extra small, sm - small (phones), md - medium (tablets), lg - large (laptops), xl - extra large (desktops). The number of columns sets the width of the content depending on the device. 12 means that the content will take up the whole screen, while 6 means that only half of it will be used. -->
                 <div class="header">
-                    <h1>June Tanaka</h1>
-                    <h2 id="white-h2">Creative director | Art manager</h2>
-                    <!-- "id" attribute should be used for those HTML elements, that needs to be styled uniquely. This h2 must be white, even though all the others are brown. "id" attribute can only have one value and can be used only once. -->
+                    <header>
+                        <h1>June Tanaka</h1>
+                        <h2 class="white-h2">Creative director | Art manager</h2>
+                        <!-- "id" attribute should be used for those HTML elements, that needs to be styled uniquely. This h2 must be white, even though all the others are brown. "id" attribute can only have one value and can be used only once. -->
+                    </header>
                 </div>
             </div>
         </div>
         <div class="row no-gutter-1">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 section-1">
+            <div class="col-md-6 section-1">
                 <div class="about">
                     <h2>About June</h2>
                     <p> Creative Director with 8+ years of hands-on experience in creative direction, product development and branding. Successful in devising and applying new ideas and innovation to propel companies to build a competitive advantage.</p>
@@ -43,15 +45,15 @@
                     <p>lune.tanaka@mail.com <br> 098-0393-2266</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 section-2">
+            <div class="col-md section-2">
                 <div class="photo">
-                    <img src="./img/june.jpg" alt="June Tanaka Portrait"/>
+                    <img src="./img/june.jpg" alt="June Tanaka Portrait" class="portrait"/>
                 </div>
             </div>
         </div>
         <div class="row no-gutter-2">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 section-3">
-                <img src="./img/camera-icon.png" alt="camera icon" width="100%" class="img-cam">
+            <div class="col-md-6 section-3">
+                <img src="./img/camera-icon.png" alt="camera icon" class="img-cam">
                 <div class="experience">
                     <div class="h2-experience">
                         <h2>Experience</h2>
@@ -59,48 +61,66 @@
                     <div class="work">
                         <div class="A">
                             <h2>2013 - 2019</h2>
-                            <p>Amperce, Inc. <br> Creative Director</p>
+                            <p>Amperce, Inc.</p>
+                            <p>Creative Director</p>
                         </div>
                         <div class="B">
                             <h2>2010 - 2013</h2>
-                            <p>Digital Pop Group <br> Creative Director</p>
+                            <p>Digital Pop Group</p>
+                            <p>Creative Director</p>
                         </div>
                     </div>
                     <div class="social-media">
-                        <div class="fb">
-                            <img src="./img/icon-fb.png" alt="Facebook" class="img-fb"/>
-                            <p>fb.com/ <br> june.tanaka</p>
+                        <div class="sm-1">
+                            <img src="./img/icon-fb.png" alt="Facebook" class="img-sm"/>
+                            <p>fb.com/</p>
+                            <p>june.tanaka</p>
                         </div>
-                        <div class="twitter">
-                            <img src="./img/icon-twitter.png" alt="Twitter" class="img-tw"/>
-                            <p>twitter.com/ <br> june.tanaka</p>
+                        <div class="sm-2">
+                            <img src="./img/icon-twitter.png" alt="Twitter" class="img-sm"/>
+                            <p>twitter.com/</p>
+                            <p>june.tanaka</p>
                         </div>
-                        <div class="behance">
-                            <img src="./img/icon-behance.png" alt="Behance" class="img-be"/>
-                            <p>behance.net/ <br> june.tanaka</p>
+                        <div class="sm-3">
+                            <img src="./img/icon-behance.png" alt="Behance" class="img-sm"/>
+                            <p>behance.net/</p>
+                            <p>june.tanaka</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 section-4">
+            <div class="col-md-6 section-4">
                 <div class="achievement">
                     <div class="achievement-1">
                         <h2>70+</h2>
-                        <p class="centered-p">Curated <br> projects</p>
+                        <p class="center-p">Curated</p>
+                        <p class="center-p">projects</p>
                     </div>
                     <div class="achievement-2">
                         <h2>20+</h2>
-                        <p class="centered-p">Happy <br> clients</p>
+                        <p class="center-p">Happy</p>
+                        <p class="center-p">clients</p>
                     </div>
                     <div class="achievement-3">
                         <h2>120K</h2>
-                        <p class="centered-p">Insta <br> followers</p>
+                        <p class="center-p">Insta</p>
+                        <p class="center-p">followers</p>
                     </div>
                     <div class="achievement-4">
                         <h2>3</h2>
-                        <p class="centered-p">Successful <br> business</p>
+                        <p class="center-p">Successful</p>
+                        <p class="center-p">business</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs section-5">
+                <footer>
+                    <p>
+                        Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)).
+                    </p>
+                </footer>
             </div>
         </div>
     </div>
