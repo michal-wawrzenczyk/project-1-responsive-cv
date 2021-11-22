@@ -18,8 +18,14 @@ h1, h2 {
 }
 
 /* "#" selector refers to the element, that needs to be styled uniquely. Refers to HTML element with "id" attribute. However here I will use the "class" attribute.  */
-.white-h2 {
+.position {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .position {
+        color: black;
+    }
 }
 
 /* "Type" selector */
@@ -161,6 +167,7 @@ p {
 .section-4 {
     flex-wrap: wrap;
     padding: 20px;
+    align-content: center;
 }
 
 .realization {
@@ -169,6 +176,20 @@ p {
     flex-direction: column;
     text-transform: uppercase;
     line-height: 5px;
+}
+
+.vl {
+    border-right: 1px solid #715e49;
+}
+
+.hr {
+    border-top: 1px solid #715e49;
+}
+
+@media (max-width: 768px){
+    .vl, .hr {
+        border: none;
+    }
 }
 
 .footer-text {
