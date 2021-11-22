@@ -43,17 +43,16 @@ p {
 }
 
 .container {
+    background-color: #f9fbf9;
     /* CV's are mostly A4 size - width x height = 210 x 297 mm */
     width: 210mm;
-    background-color: #f9fbf9;
-    /* border is used to show where exactly is the container */
-    border: 1px solid black;
+    /* "border" can be used to show where exactly is the container */
     /* Bootstrap containers have 15px padding (left and right) by default. I don't want them. */
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.header {
+.name-position {
     display: flex;
     /* "display" defines a flex container (inline or block depending on the value). */
     flex-direction: column;
@@ -62,12 +61,12 @@ p {
     padding: 50px;
 }
 
-.header, .section-3 {
+.name-position, .section-3 {
     background-color: #dbcbba;
 }
 
 /* "section" value of attribute for columns. Bootstrap columns have 15 px left and right padding set by default. They must be removed to preserve the CV template. */
-.section-1, .section-2, .section-3, .section-4, .section-5 {
+.section-1, .section-2, .section-3, .section-4 {
     padding-left: 0;
     padding-right: 0;
 }
@@ -78,7 +77,7 @@ p {
     margin-right: 0;
 }
 
-.about, .portfolio, .contact, .h2-experience, .work, .social-media, footer {
+.about, .portfolio, .contact, .h2-experience, .work, .social-media, .footer-text {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 20px;
@@ -140,65 +139,42 @@ p {
     margin-bottom: 10px;
 }
 
-.section-3, .section-4 {
+.section-3, .section-4, .realization {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.social-media, .achievement {
-    display: grid;
+.social-media {
+    display: flex;
 }
 
-.sm-1, .sm-2, .sm-3 {
-    grid-row: 1;
+.social-media, .section-4 {
+    flex-direction: row;
+}
+
+.sm {
     padding-right: 20px;
     line-height: 5px;
 }
 
-.sm-1 {
-    grid-column: 1;
+.section-4 {
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.achievement {
-    /* There is no grid-gap */
-    align-items: center;
-    padding: 50px;
-}
-
-.achievement-1, .achievement-2, .achievement-3, .achievement-4 {
-    display: flex;
+.realization {
+    width: 120px;
+    height: 120px;
     flex-direction: column;
     text-transform: uppercase;
-    text-align: center;
-    padding: 20px;
     line-height: 5px;
 }
 
-.center-p {
-    text-align: center;
-}
-
-/* There will be 2 columns and 2 rows. If I set the two first achievements, the rest will match. */
-.achievement-1 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.achievement-2 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.achievement-1, .achievement-2 {
-    border-bottom: 1px solid #715e49;
-}
-
-.achievement-1, .achievement-3 {
-    border-right: 1px solid #715e49;
-}
-
-footer {
+.footer-text {
+    background-color: rgba(103, 86, 74, 0.3);
+    border-top: 3px solid white;
     padding-top: 20px;
     text-align: justify;
+    font-size: 8px;
 }
